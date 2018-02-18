@@ -59,11 +59,11 @@ At some point of implementation I found a LifeWiki which has tons of information
 
 
     
-    <link rel="stylesheet" href="https://darednaxella.name/css/reset.css?t=2018-02-18%2019%3a59%3a36.570432187%20%2b0200%20EET%20m%3d%2b0.036032127">
-    <link rel="stylesheet" href="https://darednaxella.name/css/pygments.css?t=2018-02-18%2019%3a59%3a36.570432187%20%2b0200%20EET%20m%3d%2b0.036032127">
-    <link rel="stylesheet" href="https://darednaxella.name/css/main.css?t=2018-02-18%2019%3a59%3a36.570432187%20%2b0200%20EET%20m%3d%2b0.036032127">
+    <link rel="stylesheet" href="https://darednaxella.name/css/reset.css?t=2018-02-18%2020%3a07%3a51.716303524%20%2b0200%20EET%20m%3d%2b0.035362968">
+    <link rel="stylesheet" href="https://darednaxella.name/css/pygments.css?t=2018-02-18%2020%3a07%3a51.716303524%20%2b0200%20EET%20m%3d%2b0.035362968">
+    <link rel="stylesheet" href="https://darednaxella.name/css/main.css?t=2018-02-18%2020%3a07%3a51.716303524%20%2b0200%20EET%20m%3d%2b0.035362968">
     
-        <link rel="stylesheet" href="https://darednaxella.name/css/overrides.css?t=2018-02-18%2019%3a59%3a36.570432187%20%2b0200%20EET%20m%3d%2b0.036032127">
+        <link rel="stylesheet" href="https://darednaxella.name/css/overrides.css?t=2018-02-18%2020%3a07%3a51.716303524%20%2b0200%20EET%20m%3d%2b0.035362968">
     
 
 
@@ -180,13 +180,15 @@ At some point of implementation I found a LifeWiki which has tons of information
             <div class="markdown">
                 
 
-<h4 id="intro">Intro</h4>
+<h2 id="intro">Intro</h2>
 
 <p>I spent some time recently thinking on implementation of <a href="http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway&rsquo;s Game of Life</a>. Since it effectively has only four rules explaining all the &ldquo;mechanics&rdquo;, there is not much to implement. The main purpose for me was to refresh knowledge of JavaScript and get a bit more familiar with Node.js and D3.js.</p>
 
+<p><img src="https://darednaxella.name/img/2015/01/Screenshot-2015-01-10-14-23-52.png" alt="" /></p>
+
 <p>At some point of implementation I found a <a href="http://www.conwaylife.com/wiki/Main_Page">LifeWiki</a> which has tons of information about different patterns and their behavior. Notably, there is also an archive of 3k+ patterns of life available for download as a single archive. I decided to widen the result a bit to include DIY RLE parser and a simple browser for that collection.</p>
 
-<h4 id="rle-format">RLE Format</h4>
+<h2 id="rle-format">RLE Format</h2>
 
 <p>Wikipedia says that</p>
 
@@ -194,7 +196,7 @@ At some point of implementation I found a LifeWiki which has tons of information
 <p><a href="http://en.wikipedia.org/wiki/Run-length_encoding">Run-length encoding</a> (RLE) is a very simple form of data compression in which runs of data (that is, sequences in which the same data value occurs in many consecutive data elements) are stored as a single data value and count, rather than as the original run. This is most useful on data that contains many such runs.</p>
 </blockquote>
 
-<p>With some modifications it can be easily used for cellular automata data. For example, here is the famous [Gosper Glider Gun]() described in RLE format:</p>
+<p>With some modifications it can be easily used for cellular automata data. For example, here is the famous <a href="http://www.conwaylife.com/w/index.php?title=Gosper_glider_gun">Gosper Glider Gun</a> described in RLE format:</p>
 
 <pre><code>#N Gosper glider gun
 #C This was the first gun discovered.
