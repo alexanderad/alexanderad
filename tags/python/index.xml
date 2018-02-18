@@ -20,8 +20,7 @@
       <description>Install Assuming you want to benefit from pyhton-readable traces we need a py-bt extension and debug symbols:
 sudo apt-get install gdb python2.7-dbg  Attach Attaching to a running process (you must be either owner of this process or root):
 gdb python gdb&amp;gt; attach &amp;lt;pid&amp;gt;  Note: process is stopped the moment you attach.
-Inspect  list code for current frame with py-list. Current line is shown as &amp;gt;:
-gdb&amp;gt; py-list 1427 Takes length to receive and repeatedly calls recv until able to 1428 return a buffer of that length, raising ConnectionFailure on error.</description>
+Inspect  list code for current frame with py-list. Current line is shown as &amp;gt;:  gdb&amp;gt; py-list 1427 Takes length to receive and repeatedly calls recv until able to 1428 return a buffer of that length, raising ConnectionFailure on error.</description>
     </item>
     
   </channel>

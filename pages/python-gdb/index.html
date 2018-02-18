@@ -12,15 +12,13 @@
 <meta name="description" content="Install Assuming you want to benefit from pyhton-readable traces we need a py-bt extension and debug symbols:
 sudo apt-get install gdb python2.7-dbg  Attach Attaching to a running process (you must be either owner of this process or root):
 gdb python gdb&gt; attach &lt;pid&gt;  Note: process is stopped the moment you attach.
-Inspect  list code for current frame with py-list. Current line is shown as &gt;:
-gdb&gt; py-list 1427 Takes length to receive and repeatedly calls recv until able to 1428 return a buffer of that length, raising ConnectionFailure on error.">
+Inspect  list code for current frame with py-list. Current line is shown as &gt;:  gdb&gt; py-list 1427 Takes length to receive and repeatedly calls recv until able to 1428 return a buffer of that length, raising ConnectionFailure on error.">
 
 <meta property="og:title" content="gdb python cheatsheet" />
 <meta property="og:description" content="Install Assuming you want to benefit from pyhton-readable traces we need a py-bt extension and debug symbols:
 sudo apt-get install gdb python2.7-dbg  Attach Attaching to a running process (you must be either owner of this process or root):
 gdb python gdb&gt; attach &lt;pid&gt;  Note: process is stopped the moment you attach.
-Inspect  list code for current frame with py-list. Current line is shown as &gt;:
-gdb&gt; py-list 1427 Takes length to receive and repeatedly calls recv until able to 1428 return a buffer of that length, raising ConnectionFailure on error." />
+Inspect  list code for current frame with py-list. Current line is shown as &gt;:  gdb&gt; py-list 1427 Takes length to receive and repeatedly calls recv until able to 1428 return a buffer of that length, raising ConnectionFailure on error." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://darednaxella.name/pages/python-gdb/" />
 
@@ -65,11 +63,11 @@ gdb&gt; py-list 1427 Takes length to receive and repeatedly calls recv until abl
 
 
     
-    <link rel="stylesheet" href="https://darednaxella.name/css/reset.css?t=2018-02-18%2016%3a29%3a37.131564237%20%2b0200%20EET%20m%3d%2b0.030164037">
-    <link rel="stylesheet" href="https://darednaxella.name/css/pygments.css?t=2018-02-18%2016%3a29%3a37.131564237%20%2b0200%20EET%20m%3d%2b0.030164037">
-    <link rel="stylesheet" href="https://darednaxella.name/css/main.css?t=2018-02-18%2016%3a29%3a37.131564237%20%2b0200%20EET%20m%3d%2b0.030164037">
+    <link rel="stylesheet" href="https://darednaxella.name/css/reset.css?t=2018-02-18%2019%3a58%3a57.034812702%20%2b0200%20EET%20m%3d%2b0.047135913">
+    <link rel="stylesheet" href="https://darednaxella.name/css/pygments.css?t=2018-02-18%2019%3a58%3a57.034812702%20%2b0200%20EET%20m%3d%2b0.047135913">
+    <link rel="stylesheet" href="https://darednaxella.name/css/main.css?t=2018-02-18%2019%3a58%3a57.034812702%20%2b0200%20EET%20m%3d%2b0.047135913">
     
-        <link rel="stylesheet" href="https://darednaxella.name/css/overrides.css?t=2018-02-18%2016%3a29%3a37.131564237%20%2b0200%20EET%20m%3d%2b0.030164037">
+        <link rel="stylesheet" href="https://darednaxella.name/css/overrides.css?t=2018-02-18%2019%3a58%3a57.034812702%20%2b0200%20EET%20m%3d%2b0.047135913">
     
 
 
@@ -104,6 +102,10 @@ gdb&gt; py-list 1427 Takes length to receive and repeatedly calls recv until abl
                 
                     
                 
+                    
+                
+                    
+                
                 
                 <a href="https://darednaxella.name/"><img class="avatar" src="https://darednaxella.name/img/profile.jpg" srcset="https://darednaxella.name/img/profile.jpg 1x"></a>
             
@@ -113,8 +115,6 @@ gdb&gt; py-list 1427 Takes length to receive and repeatedly calls recv until abl
                 <ul>
                     
                         <li class="nav-blog"><a href="https://darednaxella.name/"><span>Index</span></a></li>
-                    
-                        <li class="nav-about"><a href="https://darednaxella.name/about/"><span>About</span></a></li>
                     
                 </ul>
             </nav>
@@ -204,7 +204,8 @@ gdb&gt; attach &lt;pid&gt;
 <h3 id="inspect">Inspect</h3>
 
 <ul>
-<li><p>list code for current frame with <code>py-list</code>. Current line is shown as <code>&gt;</code>:</p>
+<li>list code for current frame with <code>py-list</code>. Current line is shown as <code>&gt;</code>:</li>
+</ul>
 
 <pre><code>gdb&gt; py-list
 1427            Takes length to receive and repeatedly calls recv until able to
@@ -218,19 +219,15 @@ gdb&gt; attach &lt;pid&gt;
 1435                length -= len(chunk)
 1436                message += chunk
 1437            return message
-</code></pre></li>
+</code></pre>
 
-<li><p>list all threads with <code>info threads</code></p></li>
-
-<li><p>list code for all frames <code>thread apply all py-list</code></p></li>
-
-<li><p>switch between threads with <code>thread &lt;number&gt;</code></p></li>
-
-<li><p>navigate frames with <code>py-up</code> and <code>py-down</code></p></li>
-
-<li><p>inspect context with <code>py-locals</code>, <code>py-globals</code> and <code>py-print</code></p></li>
-
-<li><p>resume process with <code>c</code></p></li>
+<ul>
+<li>list all threads with <code>info threads</code></li>
+<li>list code for all frames <code>thread apply all py-list</code></li>
+<li>switch between threads with <code>thread &lt;number&gt;</code></li>
+<li>navigate frames with <code>py-up</code> and <code>py-down</code></li>
+<li>inspect context with <code>py-locals</code>, <code>py-globals</code> and <code>py-print</code></li>
+<li>resume process with <code>c</code></li>
 </ul>
 
 <h3 id="read">Read</h3>
@@ -256,7 +253,7 @@ gdb&gt; attach &lt;pid&gt;
 
 <script>
 window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-123-45', 'auto');
+ga('create', 'UA-99734322-2', 'auto');
 ga('send', 'pageview');
 </script>
 <script async src='//www.google-analytics.com/analytics.js'></script>

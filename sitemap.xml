@@ -105,103 +105,12 @@
   </url>
   
   <url>
-    <loc>https://darednaxella.name/tags/broken-things/</loc>
-    <lastmod>2014-12-21T05:31:34+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://darednaxella.name/categories/broken-things/</loc>
-    <lastmod>2014-12-21T05:31:34+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://darednaxella.name/categories/</loc>
-    <lastmod>2014-12-21T05:31:34+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://darednaxella.name/tags/copter-build-log/</loc>
-    <lastmod>2015-06-04T19:04:09+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://darednaxella.name/categories/copter-build-log/</loc>
-    <lastmod>2015-06-04T19:04:09+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://darednaxella.name/tags/gdb/</loc>
-    <lastmod>2015-07-26T06:31:22+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://darednaxella.name/categories/gdb/</loc>
-    <lastmod>2015-07-26T06:31:22+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://darednaxella.name/tags/git/</loc>
-    <lastmod>2014-08-13T08:18:08+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://darednaxella.name/categories/git/</loc>
-    <lastmod>2014-08-13T08:18:08+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://darednaxella.name/tags/howto/</loc>
-    <lastmod>2014-12-21T05:31:34+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://darednaxella.name/categories/howto/</loc>
-    <lastmod>2014-12-21T05:31:34+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://darednaxella.name/tags/javascript/</loc>
-    <lastmod>2015-01-10T07:43:52+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://darednaxella.name/categories/javascript/</loc>
-    <lastmod>2015-01-10T07:43:52+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://darednaxella.name/tags/pegjs/</loc>
-    <lastmod>2015-01-10T07:43:52+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://darednaxella.name/categories/pegjs/</loc>
-    <lastmod>2015-01-10T07:43:52+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://darednaxella.name/tags/programming/</loc>
-    <lastmod>2015-01-10T07:43:52+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://darednaxella.name/categories/programming/</loc>
     <lastmod>2015-01-10T07:43:52+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -213,50 +122,20 @@
   </url>
   
   <url>
-    <loc>https://darednaxella.name/categories/python/</loc>
-    <lastmod>2015-07-26T06:31:22+00:00</lastmod>
+    <loc>https://darednaxella.name/tags/quadcopter/</loc>
+    <lastmod>2015-06-04T19:04:09+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://darednaxella.name/tags/</loc>
-    <lastmod>2014-12-21T05:31:34+00:00</lastmod>
+    <lastmod>2015-01-10T07:43:52+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://darednaxella.name/tags/tech/</loc>
     <lastmod>2015-07-26T06:31:22+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://darednaxella.name/categories/tech/</loc>
-    <lastmod>2015-07-26T06:31:22+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://darednaxella.name/tags/thoughts/</loc>
-    <lastmod>2014-08-13T08:18:08+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://darednaxella.name/categories/thoughts/</loc>
-    <lastmod>2014-08-13T08:18:08+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://darednaxella.name/tags/turnigy-9x/</loc>
-    <lastmod>2014-12-21T05:31:34+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://darednaxella.name/categories/turnigy-9x/</loc>
-    <lastmod>2014-12-21T05:31:34+00:00</lastmod>
     <priority>0</priority>
   </url>
   

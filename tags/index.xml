@@ -6,55 +6,10 @@
     <description>Recent content in Tags on Alexander Shchapov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 21 Dec 2014 05:31:34 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Jan 2015 07:43:52 +0000</lastBuildDate>
     
 	<atom:link href="https://darednaxella.name/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Broken Things</title>
-      <link>https://darednaxella.name/tags/broken-things/</link>
-      <pubDate>Sun, 21 Dec 2014 05:31:34 +0000</pubDate>
-      
-      <guid>https://darednaxella.name/tags/broken-things/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Copter Build Log</title>
-      <link>https://darednaxella.name/tags/copter-build-log/</link>
-      <pubDate>Thu, 04 Jun 2015 19:04:09 +0000</pubDate>
-      
-      <guid>https://darednaxella.name/tags/copter-build-log/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Gdb</title>
-      <link>https://darednaxella.name/tags/gdb/</link>
-      <pubDate>Sun, 26 Jul 2015 06:31:22 +0000</pubDate>
-      
-      <guid>https://darednaxella.name/tags/gdb/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Git</title>
-      <link>https://darednaxella.name/tags/git/</link>
-      <pubDate>Wed, 13 Aug 2014 08:18:08 +0000</pubDate>
-      
-      <guid>https://darednaxella.name/tags/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Howto</title>
-      <link>https://darednaxella.name/tags/howto/</link>
-      <pubDate>Sun, 21 Dec 2014 05:31:34 +0000</pubDate>
-      
-      <guid>https://darednaxella.name/tags/howto/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Javascript</title>
@@ -62,24 +17,6 @@
       <pubDate>Sat, 10 Jan 2015 07:43:52 +0000</pubDate>
       
       <guid>https://darednaxella.name/tags/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pegjs</title>
-      <link>https://darednaxella.name/tags/pegjs/</link>
-      <pubDate>Sat, 10 Jan 2015 07:43:52 +0000</pubDate>
-      
-      <guid>https://darednaxella.name/tags/pegjs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Programming</title>
-      <link>https://darednaxella.name/tags/programming/</link>
-      <pubDate>Sat, 10 Jan 2015 07:43:52 +0000</pubDate>
-      
-      <guid>https://darednaxella.name/tags/programming/</guid>
       <description></description>
     </item>
     
@@ -93,29 +30,20 @@
     </item>
     
     <item>
+      <title>Quadcopter</title>
+      <link>https://darednaxella.name/tags/quadcopter/</link>
+      <pubDate>Thu, 04 Jun 2015 19:04:09 +0000</pubDate>
+      
+      <guid>https://darednaxella.name/tags/quadcopter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Tech</title>
       <link>https://darednaxella.name/tags/tech/</link>
       <pubDate>Sun, 26 Jul 2015 06:31:22 +0000</pubDate>
       
       <guid>https://darednaxella.name/tags/tech/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Thoughts</title>
-      <link>https://darednaxella.name/tags/thoughts/</link>
-      <pubDate>Wed, 13 Aug 2014 08:18:08 +0000</pubDate>
-      
-      <guid>https://darednaxella.name/tags/thoughts/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Turnigy 9x</title>
-      <link>https://darednaxella.name/tags/turnigy-9x/</link>
-      <pubDate>Sun, 21 Dec 2014 05:31:34 +0000</pubDate>
-      
-      <guid>https://darednaxella.name/tags/turnigy-9x/</guid>
       <description></description>
     </item>
     

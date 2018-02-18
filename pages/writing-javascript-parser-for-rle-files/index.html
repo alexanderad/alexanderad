@@ -59,11 +59,11 @@ At some point of implementation I found a LifeWiki which has tons of information
 
 
     
-    <link rel="stylesheet" href="https://darednaxella.name/css/reset.css?t=2018-02-18%2016%3a29%3a37.131564514%20%2b0200%20EET%20m%3d%2b0.030164303">
-    <link rel="stylesheet" href="https://darednaxella.name/css/pygments.css?t=2018-02-18%2016%3a29%3a37.131564514%20%2b0200%20EET%20m%3d%2b0.030164303">
-    <link rel="stylesheet" href="https://darednaxella.name/css/main.css?t=2018-02-18%2016%3a29%3a37.131564514%20%2b0200%20EET%20m%3d%2b0.030164303">
+    <link rel="stylesheet" href="https://darednaxella.name/css/reset.css?t=2018-02-18%2019%3a58%3a57.037989855%20%2b0200%20EET%20m%3d%2b0.050313045">
+    <link rel="stylesheet" href="https://darednaxella.name/css/pygments.css?t=2018-02-18%2019%3a58%3a57.037989855%20%2b0200%20EET%20m%3d%2b0.050313045">
+    <link rel="stylesheet" href="https://darednaxella.name/css/main.css?t=2018-02-18%2019%3a58%3a57.037989855%20%2b0200%20EET%20m%3d%2b0.050313045">
     
-        <link rel="stylesheet" href="https://darednaxella.name/css/overrides.css?t=2018-02-18%2016%3a29%3a37.131564514%20%2b0200%20EET%20m%3d%2b0.030164303">
+        <link rel="stylesheet" href="https://darednaxella.name/css/overrides.css?t=2018-02-18%2019%3a58%3a57.037989855%20%2b0200%20EET%20m%3d%2b0.050313045">
     
 
 
@@ -98,6 +98,10 @@ At some point of implementation I found a LifeWiki which has tons of information
                 
                     
                 
+                    
+                
+                    
+                
                 
                 <a href="https://darednaxella.name/"><img class="avatar" src="https://darednaxella.name/img/profile.jpg" srcset="https://darednaxella.name/img/profile.jpg 1x"></a>
             
@@ -107,8 +111,6 @@ At some point of implementation I found a LifeWiki which has tons of information
                 <ul>
                     
                         <li class="nav-blog"><a href="https://darednaxella.name/"><span>Index</span></a></li>
-                    
-                        <li class="nav-about"><a href="https://darednaxella.name/about/"><span>About</span></a></li>
                     
                 </ul>
             </nav>
@@ -186,8 +188,11 @@ At some point of implementation I found a LifeWiki which has tons of information
 
 <h4 id="rle-format">RLE Format</h4>
 
-<p>Wikipedia says that
-&gt; <a href="http://en.wikipedia.org/wiki/Run-length_encoding">Run-length encoding</a> (RLE) is a very simple form of data compression in which runs of data (that is, sequences in which the same data value occurs in many consecutive data elements) are stored as a single data value and count, rather than as the original run. This is most useful on data that contains many such runs.</p>
+<p>Wikipedia says that</p>
+
+<blockquote>
+<p><a href="http://en.wikipedia.org/wiki/Run-length_encoding">Run-length encoding</a> (RLE) is a very simple form of data compression in which runs of data (that is, sequences in which the same data value occurs in many consecutive data elements) are stored as a single data value and count, rather than as the original run. This is most useful on data that contains many such runs.</p>
+</blockquote>
 
 <p>With some modifications it can be easily used for cellular automata data. For example, here is the famous [Gosper Glider Gun]() described in RLE format:</p>
 
@@ -365,7 +370,7 @@ tagless_dead_tag
 <pre><code>pattern_lines
  = pattern_lines:pattern_line+ {
     return {
-        &quot;type&quot;: &quot;lines&quot;,    
+        &quot;type&quot;: &quot;lines&quot;,
         &quot;items&quot;: pattern_lines
     }
 }
@@ -411,7 +416,7 @@ pattern_single_tag
 
 <script>
 window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-123-45', 'auto');
+ga('create', 'UA-99734322-2', 'auto');
 ga('send', 'pageview');
 </script>
 <script async src='//www.google-analytics.com/analytics.js'></script>
