@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Copter Build Log on Alexander Shchapov</title>
+    <link>https://darednaxella.name/categories/copter-build-log/</link>
+    <description>Recent content in Copter Build Log on Alexander Shchapov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 04 Jun 2015 19:04:09 +0000</lastBuildDate>
+    
+	<atom:link href="https://darednaxella.name/categories/copter-build-log/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Copter Life Log: Calibrate!</title>
+      <link>https://darednaxella.name/pages/copter-life-log-calibrate/</link>
+      <pubDate>Thu, 04 Jun 2015 19:04:09 +0000</pubDate>
+      
+      <guid>https://darednaxella.name/pages/copter-life-log-calibrate/</guid>
+      <description>I know this sounds crazy (or probably obvious for you), but if something does not work or work not like you expect it to it is possible that all you need is to stop thinking about magic and just&amp;hellip; calibrate!
+I had a problem with Turnigy 9x not reaching stick limits even being set programmatically at extreme values like 120%. The problem was automagically solved after I followed this calibration guide.</description>
+    </item>
+    
+    <item>
+      <title>Copter Life Log: Repairing Turnigy 9X broken Switches</title>
+      <link>https://darednaxella.name/pages/copter-life-log-repairing-turnigy-9x-broken-switches/</link>
+      <pubDate>Sun, 21 Dec 2014 05:31:34 +0000</pubDate>
+      
+      <guid>https://darednaxella.name/pages/copter-life-log-repairing-turnigy-9x-broken-switches/</guid>
+      <description>As you probably heard we&amp;rsquo;ve moved to Thailand. Good news is that I took quadcopter with me. Reasoning is simple: we have summer here all year around, while in Europe it is winter / no-flights season.
+Almost everything went smoothly with transportation: I got no security questions regarding disassembled copter parts in checked in baggage. It is well known fact that LiPo batteries are not allowed for air transportation due to safety reasons, so that I need to buy those here.</description>
+    </item>
+    
+    <item>
+      <title>Copter Life Log: Nothing Can Bring Me Down</title>
+      <link>https://darednaxella.name/pages/copter-life-log-nothing-can-bring-me-down/</link>
+      <pubDate>Sun, 16 Nov 2014 15:37:58 +0000</pubDate>
+      
+      <guid>https://darednaxella.name/pages/copter-life-log-nothing-can-bring-me-down/</guid>
+      <description>It&amp;rsquo;s mid November and I think we&amp;rsquo;re close to the end of flying season. Well, probably it is still possible to make flights on clear winter weather but most likely that is not super fun. Taking this into account on this weekend I did some flights. Nothing special, but we managed to break one of props (I was close to that dozen of times already, I just decided to let this set of props to last until the very end).</description>
+    </item>
+    
+    <item>
+      <title>Copter Life Log 11: Multiwii</title>
+      <link>https://darednaxella.name/pages/copter-life-log-11-multiwii/</link>
+      <pubDate>Mon, 29 Sep 2014 19:51:11 +0000</pubDate>
+      
+      <guid>https://darednaxella.name/pages/copter-life-log-11-multiwii/</guid>
+      <description>Foreword If you have ever tried to keep writing something like a blog on regular basis you know how hard that can be. It is so easy postpone one post a day, then do something different other day, then it is Friday, when you obviously have no time or else. Finally you bail out of all that. One of possible ways to avoid that is a keep a rhythm. There is simple rule you can try to maintain for rhythm: word count per week, or, if you want, per day.</description>
+    </item>
+    
+    <item>
+      <title>Copter Life Log 10: Broken Things</title>
+      <link>https://darednaxella.name/pages/copter-life-log-10-recent-faults/</link>
+      <pubDate>Mon, 15 Sep 2014 18:43:31 +0000</pubDate>
+      
+      <guid>https://darednaxella.name/pages/copter-life-log-10-recent-faults/</guid>
+      <description>Things are Broken It&amp;rsquo;s time to change term &amp;ldquo;build&amp;rdquo; into &amp;ldquo;life&amp;rdquo;, I guess, since we&amp;rsquo;ve everything built now and current stage is actual multicopter usage. Recent weeks I did dozen of flights in different locations and under different weather conditions. Basically learning how to flight, performing crazy acrobatic aerotricks, making tiny PI controller adjustments and other improvements.
+In this post I want to summarize faults and constructive problems I observed during those weeks of usage.</description>
+    </item>
+    
+    <item>
+      <title>Copter Build Log 9: More Flights</title>
+      <link>https://darednaxella.name/pages/copter-build-log-9-more-flights/</link>
+      <pubDate>Sun, 07 Sep 2014 18:10:19 +0000</pubDate>
+      
+      <guid>https://darednaxella.name/pages/copter-build-log-9-more-flights/</guid>
+      <description>In a last few days I recorded couple of new flights. It&amp;rsquo;ll take some time to obtain more or less acceptable flying skill!
+  </description>
+    </item>
+    
+    <item>
+      <title>Copter Build Log 8: Metrics</title>
+      <link>https://darednaxella.name/pages/copter-build-log-8-metrics/</link>
+      <pubDate>Tue, 02 Sep 2014 18:31:44 +0000</pubDate>
+      
+      <guid>https://darednaxella.name/pages/copter-build-log-8-metrics/</guid>
+      <description>The Weight Today Artem borrowed me high presicion scales so that I&amp;rsquo;m now able to make some measurements of quad. Actual results are pretty close to original expectations. Without battery it is 852 gramms, battery adds extra 190 gramms, making in total flight weight of 1042 gramms.
+Optional camera mount (or landing gear, if you want) adds 93 gramms more resulting 1135 gramms in total.
+I&amp;rsquo;m expecting quad to lift 200 gramms more of payload, most likely, GoPro camera.</description>
+    </item>
+    
+    <item>
+      <title>Copter Build Log 7: Last Updates</title>
+      <link>https://darednaxella.name/pages/copter-build-log-7-last-updates-2/</link>
+      <pubDate>Sun, 31 Aug 2014 19:40:17 +0000</pubDate>
+      
+      <guid>https://darednaxella.name/pages/copter-build-log-7-last-updates-2/</guid>
+      <description>I&amp;rsquo;ve spent last two days in Verkhovyna tuning PI parameters, learning how to flight (well, to perform controlled flight).
+Since I&amp;rsquo;m completely new flyer it is a bit difficult for me to judge flying characteristics of newly build quad. According to readings I did it performs pretty good even at default PI values. I observe no oscillations, however it is difficult to land and hold altitude, which could mean that PI gains and limits still require adjustments.</description>
+    </item>
+    
+    <item>
+      <title>Copter Build Log 6: Propellers and Maiden Flight</title>
+      <link>https://darednaxella.name/pages/copter-build-log-6-propellers/</link>
+      <pubDate>Sat, 23 Aug 2014 18:29:14 +0000</pubDate>
+      
+      <guid>https://darednaxella.name/pages/copter-build-log-6-propellers/</guid>
+      <description>Propellers Size is main characteristic of propeller and it is expressed by two figures, for example, 10 x 4.5, which mean length and pitch correspondingly in inches.
+Prop size illustration from R/C Airplane World clarifies that a bit: In short: the bigger are those values the more thrust engine can produce. However, the more thrust to be gained the more power engine must generate. If propeller is too large engine can overheat or simply not be able to spin it at required speed.</description>
+    </item>
+    
+    <item>
+      <title>Copter Build Log 5: Wiring &amp; Misc</title>
+      <link>https://darednaxella.name/pages/copter-build-log-5-wiring-2/</link>
+      <pubDate>Thu, 21 Aug 2014 19:02:46 +0000</pubDate>
+      
+      <guid>https://darednaxella.name/pages/copter-build-log-5-wiring-2/</guid>
+      <description>Since last time I finished wiring and now everything is in place. Not much to say about last stage, I think I can just leave couple of photo evidences in here. It&amp;rsquo;s a log, you know, logs are usually quite verbose and noisy.
+The final wired version looks like this: Binding Transmitter and Receiver At second stage I&amp;rsquo;ve bounded transmitter with receiver, it is as easy as holding bind button on transmitter and special BAT contacts being short-circuted on receiver.</description>
+    </item>
+    
+    <item>
+      <title>Copter Build Log 4: Wiring</title>
+      <link>https://darednaxella.name/pages/copter-build-log-4-wiring/</link>
+      <pubDate>Tue, 19 Aug 2014 21:09:21 +0000</pubDate>
+      
+      <guid>https://darednaxella.name/pages/copter-build-log-4-wiring/</guid>
+      <description>Bullets Drama As the time passes I&amp;rsquo;m losing hope for getting my parcel with bullet connectors. It&amp;rsquo;s been already more than 20 days since it was shipped from Netherlands and it should be already here. I remember I promised to balance props in this part, but instead I decided to apply hacky solution: while I lack 2 bullet connectors for complete setup I have extra XT60 connectors which are designed to connect ESCs to power, however they have same 3.</description>
+    </item>
+    
+    <item>
+      <title>Copter Build Log 3: The Firmware</title>
+      <link>https://darednaxella.name/pages/copter-build-log-3-the-firmware/</link>
+      <pubDate>Mon, 18 Aug 2014 20:36:42 +0000</pubDate>
+      
+      <guid>https://darednaxella.name/pages/copter-build-log-3-the-firmware/</guid>
+      <description>The Firmware In fact sophisticated software that stands behind all the hardware which multi-rotor is build on is far more important that mentioned above hardware. I would say that without software the copter is just four motors with controllers tight to frame. I&amp;rsquo;m not sure now if I&amp;rsquo;m going to dive deeply into software part in future, but for now I stick to flash one of offered by enthusiasts.</description>
+    </item>
+    
+    <item>
+      <title>Copter Build Log 2: Soldering ESCs</title>
+      <link>https://darednaxella.name/pages/copter-build-log-2-soldering/</link>
+      <pubDate>Tue, 12 Aug 2014 21:40:39 +0000</pubDate>
+      
+      <guid>https://darednaxella.name/pages/copter-build-log-2-soldering/</guid>
+      <description>Connectors Drama Today I finished soldering of ESCs to engines connections and ESCs to power connectors. All of those require Bullet 3.5mm Gold Connectors and I failed to calculate proper amount in advance (oh, shi). The thing is that needed amount is at least 3 x 4 female (for ESCs to motors) + 4 x 2 male (ESCs to power) making in total 12 pairs, while I, being naïve, bought 20 pcs (or 10 pairs).</description>
+    </item>
+    
+    <item>
+      <title>Copter Build Log 1: The Frame</title>
+      <link>https://darednaxella.name/pages/copter-build-log-1-the-frame/</link>
+      <pubDate>Sun, 27 Jul 2014 09:00:00 +0000</pubDate>
+      
+      <guid>https://darednaxella.name/pages/copter-build-log-1-the-frame/</guid>
+      <description>Motor Layouts Starting point of frame selection is motor layout. I don&amp;rsquo;t know if we can call helicopter a mono (rather bi, since it has tail motor) but beside that selection of number of motors is up to you.
+Connection plan from HK I&amp;rsquo;ve selected quad as most (I believe) spread and classic option. Also here we can select copter scheme, as you can see on first two pics, one is called &amp;ldquo;+&amp;rdquo;, another &amp;ldquo;X&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Copter Build Log 0: Intro</title>
+      <link>https://darednaxella.name/pages/copter-build-log-intro/</link>
+      <pubDate>Sat, 26 Jul 2014 09:00:00 +0000</pubDate>
+      
+      <guid>https://darednaxella.name/pages/copter-build-log-intro/</guid>
+      <description>What it is all About So here I&amp;rsquo;m going to post the log of Awesome Quadro-copter build. I can&amp;rsquo;t promise you anything, like, keeping it up to date. Anyway, I&amp;rsquo;ll try to do that.
+The Idea Right now, I&amp;rsquo;m trying to recover in my mind what made me thinking about building a quadro. At some point I found nice inspirational video. That reminds me of my institute, which I, say, hated at moment of my studying in there.</description>
+    </item>
+    
+  </channel>
+</rss>

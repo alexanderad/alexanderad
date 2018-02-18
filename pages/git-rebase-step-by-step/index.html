@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Alexander Shchapov">
+<meta name="description" content="A lot of mysterios stories are hidden behind rebase command, and from the start it seems to be a tricky part of git work flow. The truth is that everything becomes clear once you have a full picture in front of you. Here I&rsquo;m trying to summarize rebase command usage in one example of typical (not necessarily the best one) flow.
+Step 1: create a feature branch Assuming you&rsquo;re on a master branch of repository, create a feature branch:">
+
+<meta property="og:title" content="git rebase step by step" />
+<meta property="og:description" content="A lot of mysterios stories are hidden behind rebase command, and from the start it seems to be a tricky part of git work flow. The truth is that everything becomes clear once you have a full picture in front of you. Here I&rsquo;m trying to summarize rebase command usage in one example of typical (not necessarily the best one) flow.
+Step 1: create a feature branch Assuming you&rsquo;re on a master branch of repository, create a feature branch:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://darednaxella.name/pages/git-rebase-step-by-step/" />
+
+
+
+<meta property="article:published_time" content="2014-08-13T08:18:08&#43;00:00"/>
+
+<meta property="article:modified_time" content="2014-08-13T08:18:08&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+<title>
+
+
+     git rebase step by step 
+
+</title>
+<link rel="canonical" href="https://darednaxella.name/pages/git-rebase-step-by-step/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://darednaxella.name/css/reset.css?t=2018-02-18%2016%3a24%3a09.714947759%20%2b0200%20EET%20m%3d%2b0.051228621">
+    <link rel="stylesheet" href="https://darednaxella.name/css/pygments.css?t=2018-02-18%2016%3a24%3a09.714947759%20%2b0200%20EET%20m%3d%2b0.051228621">
+    <link rel="stylesheet" href="https://darednaxella.name/css/main.css?t=2018-02-18%2016%3a24%3a09.714947759%20%2b0200%20EET%20m%3d%2b0.051228621">
+    
+        <link rel="stylesheet" href="https://darednaxella.name/css/overrides.css?t=2018-02-18%2016%3a24%3a09.714947759%20%2b0200%20EET%20m%3d%2b0.051228621">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://darednaxella.name/img/leaf.ico"
+
+>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                
+                <a href="https://darednaxella.name/"><img class="avatar" src="https://darednaxella.name/img/profile.jpg" srcset="https://darednaxella.name/img/profile.jpg 1x"></a>
+            
+            <a href="https://darednaxella.name/"><div class="name">Alexander Shchapov</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        <li class="nav-blog"><a href="https://darednaxella.name/"><span>Index</span></a></li>
+                    
+                        <li class="nav-about"><a href="https://darednaxella.name/about/"><span>About</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/alexanderad" target="_blank" rel="noopener"><img class="icon" src="https://darednaxella.name/img/github.svg" alt="github" /></a>
+        
+
+        
+
+	
+
+        
+
+        
+
+        
+            <a href="//linkedin.com/in/darednaxella" target="_blank" rel="noopener"><img class="icon" src="https://darednaxella.name/img/linkedin.svg" alt="linkedin" /></a>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    git rebase step by step
+
+</div>
+
+                    <div class="initials"><a href="https://darednaxella.name/"></a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Wed Aug 13 2014 08:18:08 UTC'>Aug 13, 2014</div>
+                    
+                    
+		    <div class="reading-time"><div class="middot"></div>5 minutes read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                
+
+<p>A lot of mysterios stories are hidden behind <code>rebase</code> command, and from the start it seems to be a tricky part of git work flow. The truth is that everything becomes clear once you have a full picture in front of you. Here I&rsquo;m trying to summarize <code>rebase</code> command usage in one example of <em>typical</em> (not necessarily the best one) flow.</p>
+
+<h4 id="step-1-create-a-feature-branch">Step 1: create a feature branch</h4>
+
+<p>Assuming you&rsquo;re on a <code>master</code> branch of repository, create a feature branch:</p>
+
+<pre><code>$ git checkout master
+$ git checkout -b feature-x
+</code></pre>
+
+<h4 id="step-2-write-the-code">Step 2: write the code</h4>
+
+<p>Now feel free to <em>do your work</em>. Write the code. Commit as many times as you need or want.</p>
+
+<p>Just one little change to your usual workflow: in order to make your <code>rebase</code> procedure easier (for you), mark your first commit with <code>r</code> (where &ldquo;r&rdquo; stands for &ldquo;reword&rdquo;) and all subsequent commits with <code>s</code> (stands for &ldquo;squash&rdquo;). Don&rsquo;t ask questions yet, you&rsquo;ll see in a minute. Let&rsquo;s imagine you did the following:</p>
+
+<pre><code>$ echo &quot;c1&quot; &gt; test # some work done here
+$ git commit -am &quot;r: first commit&quot;
+
+$ echo &quot;c2&quot; &gt;&gt; test # more work done here
+$ git commit -am &quot;s: second commit&quot;
+
+$ echo &quot;c3&quot; &gt;&gt; test # some final changes are commited in here
+$ git commit -am &quot;s: third commit&quot;
+</code></pre>
+
+<p>Note: <code>-am</code> is not a good practice, it is used here just for demonstration.</p>
+
+<h4 id="step-3-it-s-time-to-rebase">Step 3: it&rsquo;s time to rebase</h4>
+
+<p>Now your <code>feature-x</code> branch has three commits and you&rsquo;ve decided that it&rsquo;s time to present team a pull request. Your history looks like this:</p>
+
+<pre><code>$ git log master..feature-x --oneline
+83c9a8a s: third commit
+cfafc3d s: second commit
+ad79f34 r: first commit
+</code></pre>
+
+<p>But what you really want to is to present one commit instead of bunch of dummy &ldquo;work in progress&rdquo; commits. This procedure is called squashing: you want to squash three commits into one. In order to do that it&rsquo;s time for rebase with following command: <code>git rebase -i HEAD~N</code> where <code>N</code> is a number of commits you&rsquo;ve made:</p>
+
+<pre><code>$ git rebase -i HEAD~3
+</code></pre>
+
+<p>Hint: if you are lazy to count or you have many of commits to rebase, you can ask git to count for you:</p>
+
+<pre><code>$ git log master..feature-x --oneline | wc -l
+3  
+</code></pre>
+
+<p>Ok, with rebase command you&rsquo;ll enter interactive rebase, which looks something like this:</p>
+
+<pre><code>pick ad79f34 r: first commit
+pick cfafc3d s: second commit
+pick 83c9a8a s: third commit
+
+# Rebase 4d7fa87..83c9a8a onto 4d7fa87
+#
+# Commands:
+#  p, pick = use commit
+#  r, reword = use commit, but edit the commit message
+#  e, edit = use commit, but stop for amending
+#  s, squash = use commit, but meld into previous commit
+#  f, fixup = like &quot;squash&quot;, but discard this commit's log message
+#  x, exec = run command (the rest of the line) using shell
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+# However, if you remove everything, the rebase will be aborted.
+#
+# Note that empty commits are commented out
+</code></pre>
+
+<p>Replace first <code>pick</code> command with <code>r</code> or <code>reword</code> and all subsequent commits with <code>s</code> or <code>squash</code>. Do you remember we&rsquo;ve marked commits with <code>r</code> and <code>s</code>? That was optional, in fact, just for you to remembers what you want to squash and what to leave. Do not touch commit messages for now, you&rsquo;ll be able to do that in a moment.</p>
+
+<pre><code>r ad79f34 r: first commit
+s cfafc3d s: second commit
+s 83c9a8a s: third commit
+
+# Rebase 4d7fa87..83c9a8a onto 4d7fa87
+</code></pre>
+
+<p>Now save the changes, you&rsquo;ll jump into &ldquo;reword&rdquo; for first commit. Modify your message now, if you want. Save the changes, you&rsquo;ll jump into final commit message editor:</p>
+
+<pre><code>This is a combination of 3 commits.
+# The first commit's message is:
+This commit message is final.
+
+# This is the 2nd commit message:
+
+s: second commit
+
+# This is the 3rd commit message:
+
+s: third commit
+
+# Please enter the commit message for your changes.
+</code></pre>
+
+<p>Feel free to change this final message as you wish. Finally save the changes.</p>
+
+<pre><code> 1 file changed, 3 insertions(+)
+ create mode 100644 test
+Successfully rebased and updated refs/heads/feature-x.
+</code></pre>
+
+<h4 id="optional-step-4-rebasing-on-top-of-latest-master">Optional step 4: rebasing on top of latest master</h4>
+
+<p>You did that. Now you branch has all changes in one commit and that&rsquo;s definitely for good. But it is highly possible that while you&rsquo;re working on your <code>feature-x</code> one has made something useful on <code>master</code> branch and you need to update your branch to match latest changes. Tricky part in this is to put your commit on top of latest changes to keep history clean. In fact, you need to merge changes from <code>master</code> into <code>feature-x</code>. But what if we just take last commit on <code>master</code> and put your changes on top of that last commit?</p>
+
+<pre><code>$ git checkout master
+$ git pull
+Already up-to-date.
+$ git checkout feature-x
+$ git rebase master
+First, rewinding head to replay your work on top of it...
+Applying: This commit message is final.
+</code></pre>
+
+<p>That&rsquo;s it! Now you have your latest <code>master</code> branch in your <code>feature-x</code> branch and your changes <em>on top of latest</em> <code>master</code>.</p>
+
+<h4 id="optional-step-5-changing-commit-timestamp">Optional step 5: changing commit timestamp</h4>
+
+<p>One thing can make you unhappy about: if you melt all commits into first one you&rsquo;ll have one commit in history and its timestamp is equal to first commit timestamp. Imagine it took you 3 days to finish work, after which you squashed everything into one commit, in this case you can wish to change timestamp to reflect reality, it can be done easily:</p>
+
+<pre><code>$ git commit --amend --date=&quot;&quot;
+</code></pre>
+
+<p><code>date=&quot;&quot;</code> in here means you want latest commit to take current date as timestamp.</p>
+
+<h4 id="optional-step-6-pushing-changes-to-remote">Optional step 6: pushing changes to remote</h4>
+
+<p>Push your changes to remote side, go and create a nice pull request now!</p>
+
+<pre><code>$ git push origin feature-x
+</code></pre>
+
+<p>Remember, that using rebase you change history, that is why if you branch is present on remote side, git can refuse to accept your changes. Force can help you.</p>
+
+<pre><code>$ git push -f
+</code></pre>
+
+<h4 id="afterwords">Afterwords</h4>
+
+<p>Use rebase wisely and carefuly. Remember that if someone else is working with you in your branch (or have a copy fetched) you should consider avoid using rebase until all the work is done in branch.</p>
+
+<p>Yay!</p>
+
+                <br>
+		<p class="back-to-posts"><a href="https://darednaxella.name/blog/">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-123-45', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tech on Alexander Shchapov</title>
+    <link>https://darednaxella.name/categories/tech/</link>
+    <description>Recent content in Tech on Alexander Shchapov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 26 Jul 2015 06:31:22 +0000</lastBuildDate>
+    
+	<atom:link href="https://darednaxella.name/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>gdb python cheatsheet</title>
+      <link>https://darednaxella.name/pages/python-gdb/</link>
+      <pubDate>Sun, 26 Jul 2015 06:31:22 +0000</pubDate>
+      
+      <guid>https://darednaxella.name/pages/python-gdb/</guid>
+      <description>Install Assuming you want to benefit from pyhton-readable traces we need a py-bt extension and debug symbols:
+sudo apt-get install gdb python2.7-dbg  Attach Attaching to a running process (you must be either owner of this process or root):
+gdb python gdb&amp;gt; attach &amp;lt;pid&amp;gt;  Note: process is stopped the moment you attach.
+Inspect  list code for current frame with py-list. Current line is shown as &amp;gt;:
+gdb&amp;gt; py-list 1427 Takes length to receive and repeatedly calls recv until able to 1428 return a buffer of that length, raising ConnectionFailure on error.</description>
+    </item>
+    
+    <item>
+      <title>Writing JavaScript parser for RLE files with PEG.js</title>
+      <link>https://darednaxella.name/pages/writing-javascript-parser-for-rle-files/</link>
+      <pubDate>Sat, 10 Jan 2015 07:43:52 +0000</pubDate>
+      
+      <guid>https://darednaxella.name/pages/writing-javascript-parser-for-rle-files/</guid>
+      <description>Intro I spent some time recently thinking on implementation of Conway&amp;rsquo;s Game of Life. Since it effectively has only four rules explaining all the &amp;ldquo;mechanics&amp;rdquo;, there is not much to implement. The main purpose for me was to refresh knowledge of JavaScript and get a bit more familiar with Node.js and D3.js.
+At some point of implementation I found a LifeWiki which has tons of information about different patterns and their behavior.</description>
+    </item>
+    
+    <item>
+      <title>git rebase step by step</title>
+      <link>https://darednaxella.name/pages/git-rebase-step-by-step/</link>
+      <pubDate>Wed, 13 Aug 2014 08:18:08 +0000</pubDate>
+      
+      <guid>https://darednaxella.name/pages/git-rebase-step-by-step/</guid>
+      <description>A lot of mysterios stories are hidden behind rebase command, and from the start it seems to be a tricky part of git work flow. The truth is that everything becomes clear once you have a full picture in front of you. Here I&amp;rsquo;m trying to summarize rebase command usage in one example of typical (not necessarily the best one) flow.
+Step 1: create a feature branch Assuming you&amp;rsquo;re on a master branch of repository, create a feature branch:</description>
+    </item>
+    
+  </channel>
+</rss>

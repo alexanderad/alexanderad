@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pegjs on Alexander Shchapov</title>
+    <link>https://darednaxella.name/categories/pegjs/</link>
+    <description>Recent content in Pegjs on Alexander Shchapov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 10 Jan 2015 07:43:52 +0000</lastBuildDate>
+    
+	<atom:link href="https://darednaxella.name/categories/pegjs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Writing JavaScript parser for RLE files with PEG.js</title>
+      <link>https://darednaxella.name/pages/writing-javascript-parser-for-rle-files/</link>
+      <pubDate>Sat, 10 Jan 2015 07:43:52 +0000</pubDate>
+      
+      <guid>https://darednaxella.name/pages/writing-javascript-parser-for-rle-files/</guid>
+      <description>Intro I spent some time recently thinking on implementation of Conway&amp;rsquo;s Game of Life. Since it effectively has only four rules explaining all the &amp;ldquo;mechanics&amp;rdquo;, there is not much to implement. The main purpose for me was to refresh knowledge of JavaScript and get a bit more familiar with Node.js and D3.js.
+At some point of implementation I found a LifeWiki which has tons of information about different patterns and their behavior.</description>
+    </item>
+    
+  </channel>
+</rss>

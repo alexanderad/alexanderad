@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Alexander Shchapov">
+<meta name="description" content="Foreword If you have ever tried to keep writing something like a blog on regular basis you know how hard that can be. It is so easy postpone one post a day, then do something different other day, then it is Friday, when you obviously have no time or else. Finally you bail out of all that. One of possible ways to avoid that is a keep a rhythm. There is simple rule you can try to maintain for rhythm: word count per week, or, if you want, per day.">
+
+<meta property="og:title" content="Copter Life Log 11: Multiwii" />
+<meta property="og:description" content="Foreword If you have ever tried to keep writing something like a blog on regular basis you know how hard that can be. It is so easy postpone one post a day, then do something different other day, then it is Friday, when you obviously have no time or else. Finally you bail out of all that. One of possible ways to avoid that is a keep a rhythm. There is simple rule you can try to maintain for rhythm: word count per week, or, if you want, per day." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://darednaxella.name/pages/copter-life-log-11-multiwii/" />
+
+
+
+<meta property="article:published_time" content="2014-09-29T19:51:11&#43;00:00"/>
+
+<meta property="article:modified_time" content="2014-09-29T19:51:11&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+<title>
+
+
+     Copter Life Log 11: Multiwii 
+
+</title>
+<link rel="canonical" href="https://darednaxella.name/pages/copter-life-log-11-multiwii/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://darednaxella.name/css/reset.css?t=2018-02-18%2016%3a24%3a09.701291186%20%2b0200%20EET%20m%3d%2b0.037572157">
+    <link rel="stylesheet" href="https://darednaxella.name/css/pygments.css?t=2018-02-18%2016%3a24%3a09.701291186%20%2b0200%20EET%20m%3d%2b0.037572157">
+    <link rel="stylesheet" href="https://darednaxella.name/css/main.css?t=2018-02-18%2016%3a24%3a09.701291186%20%2b0200%20EET%20m%3d%2b0.037572157">
+    
+        <link rel="stylesheet" href="https://darednaxella.name/css/overrides.css?t=2018-02-18%2016%3a24%3a09.701291186%20%2b0200%20EET%20m%3d%2b0.037572157">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://darednaxella.name/img/leaf.ico"
+
+>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                
+                <a href="https://darednaxella.name/"><img class="avatar" src="https://darednaxella.name/img/profile.jpg" srcset="https://darednaxella.name/img/profile.jpg 1x"></a>
+            
+            <a href="https://darednaxella.name/"><div class="name">Alexander Shchapov</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        <li class="nav-blog"><a href="https://darednaxella.name/"><span>Index</span></a></li>
+                    
+                        <li class="nav-about"><a href="https://darednaxella.name/about/"><span>About</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/alexanderad" target="_blank" rel="noopener"><img class="icon" src="https://darednaxella.name/img/github.svg" alt="github" /></a>
+        
+
+        
+
+	
+
+        
+
+        
+
+        
+            <a href="//linkedin.com/in/darednaxella" target="_blank" rel="noopener"><img class="icon" src="https://darednaxella.name/img/linkedin.svg" alt="linkedin" /></a>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Copter Life Log 11: Multiwii
+
+</div>
+
+                    <div class="initials"><a href="https://darednaxella.name/"></a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Mon Sep 29 2014 19:51:11 UTC'>Sep 29, 2014</div>
+                    
+                    
+		    <div class="reading-time"><div class="middot"></div>3 minutes read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                
+
+<h4 id="foreword">Foreword</h4>
+
+<p>If you have ever tried to keep writing something like a blog on regular basis you know how hard that can be. It is so easy postpone one post a day, then do something different other day, then it is Friday, when you obviously have no time or else. Finally you bail out of all that. One of possible ways to avoid that is a keep a rhythm. There is simple rule you can try to maintain for rhythm: word count per week, or, if you want, per day.</p>
+
+<p><a href="https://github.com/TryGhost/Ghost">Ghost blog platform</a>, I&rsquo;m using here has a nice word count feature right on post edit page. It says that I have 113 words which means I&rsquo;m almost half way through for today&rsquo;s goal :-)</p>
+
+<h4 id="multiwii">Multiwii</h4>
+
+<p>Ok, let&rsquo;s make an overview for last several days of my multicopter-side life. First of all, I received shiny new flight controller, it is <a href="http://www.multiwii.com/">Multiwii</a> by <a href="http://witespyquad.gostorego.com/">Ready to Fly Quads</a>, which has missing features:</p>
+
+<ul>
+<li>it is built on Atmega2560</li>
+<li>it has amazing set of base sensors: MPU6050 Six Axis Gyro/Accelerometer, MS5611 Barometer, HMC5883L Magnetometer</li>
+<li>4 (four!) serial interfaces on board for different perephirals, like GPS, Bluetooth, LCD or whatever-you-invent</li>
+<li>it&rsquo;s firmware is <a href="https://code.google.com/p/multiwii/">opensource</a> and has growing communtity of funs</li>
+<li>USB interface on board for programming</li>
+</ul>
+
+<p><img src="https://darednaxella.name/content/images/2014/Sep/2014-09-27-13-25-59.jpg" alt="" /></p>
+
+<p>I spent day soldering and mounting the board instead of retired KK board and couple hours for test flights. What can I say (as a newbie pilot): it is a very nice replacement. It works perfectly almost on stock, out of the box settings, it produces absolutely stabilized and responsive flight at the same time. I&rsquo;ll add here more details as soon as I get them. Remember those words I promised? :-)</p>
+
+<h4 id="leds-story">LEDs Story</h4>
+
+<p>One of tricky parts in first (I believe in following also) flights is to keep in mind constantly changing orientation of quad. When it heads front, pitch means &ldquo;going forward and back&rdquo;, roll means &ldquo;going left and right&rdquo;. When it yaws 90 degrees, pitch starts meaning &ldquo;going left and right&rdquo;, roll equals to &ldquo;going forward and backward&rdquo;. You can expand that as it basically can turn at any angle in 360 degrees at any moment!</p>
+
+<p>There are several possible mitigations for that to make your life easier. You can mount props of different colors: say forward are orange, while back are green. You can use different colors of beams: mine forward are red, while that ones the denote back are black. Also there is an option for LEDs. I mounted simple 12V <a href="http://www.ebay.com/itm/5M-5050-RGB-SMD-LED-Waterproof-Flexible-Strip-300-LEDs-44-Key-IR-Remote-/180992529478">SMD LED Strip</a>, of two colors. Needless to say, the mounting procedure is quite easy.</p>
+
+<p><img src="https://darednaxella.name/content/images/2014/Sep/2014-09-20-17-57-22.jpg" alt="" /></p>
+
+<p>The result in dark (not so impressive, as in wild):</p>
+
+<p><img src="https://darednaxella.name/content/images/2014/Sep/2014-09-29-22-46-00.jpg" alt="" /></p>
+
+<p>Next in queue is camera mount and its stabilization servo.</p>
+
+                <br>
+		<p class="back-to-posts"><a href="https://darednaxella.name/blog/">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-123-45', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+
+</body>
+</html>
+

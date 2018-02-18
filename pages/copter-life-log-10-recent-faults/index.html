@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Alexander Shchapov">
+<meta name="description" content="Things are Broken It&rsquo;s time to change term &ldquo;build&rdquo; into &ldquo;life&rdquo;, I guess, since we&rsquo;ve everything built now and current stage is actual multicopter usage. Recent weeks I did dozen of flights in different locations and under different weather conditions. Basically learning how to flight, performing crazy acrobatic aerotricks, making tiny PI controller adjustments and other improvements.
+In this post I want to summarize faults and constructive problems I observed during those weeks of usage.">
+
+<meta property="og:title" content="Copter Life Log 10: Broken Things" />
+<meta property="og:description" content="Things are Broken It&rsquo;s time to change term &ldquo;build&rdquo; into &ldquo;life&rdquo;, I guess, since we&rsquo;ve everything built now and current stage is actual multicopter usage. Recent weeks I did dozen of flights in different locations and under different weather conditions. Basically learning how to flight, performing crazy acrobatic aerotricks, making tiny PI controller adjustments and other improvements.
+In this post I want to summarize faults and constructive problems I observed during those weeks of usage." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://darednaxella.name/pages/copter-life-log-10-recent-faults/" />
+
+
+
+<meta property="article:published_time" content="2014-09-15T18:43:31&#43;00:00"/>
+
+<meta property="article:modified_time" content="2014-09-15T18:43:31&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+<title>
+
+
+     Copter Life Log 10: Broken Things 
+
+</title>
+<link rel="canonical" href="https://darednaxella.name/pages/copter-life-log-10-recent-faults/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://darednaxella.name/css/reset.css?t=2018-02-18%2016%3a24%3a09.704599208%20%2b0200%20EET%20m%3d%2b0.040880091">
+    <link rel="stylesheet" href="https://darednaxella.name/css/pygments.css?t=2018-02-18%2016%3a24%3a09.704599208%20%2b0200%20EET%20m%3d%2b0.040880091">
+    <link rel="stylesheet" href="https://darednaxella.name/css/main.css?t=2018-02-18%2016%3a24%3a09.704599208%20%2b0200%20EET%20m%3d%2b0.040880091">
+    
+        <link rel="stylesheet" href="https://darednaxella.name/css/overrides.css?t=2018-02-18%2016%3a24%3a09.704599208%20%2b0200%20EET%20m%3d%2b0.040880091">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://darednaxella.name/img/leaf.ico"
+
+>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                
+                <a href="https://darednaxella.name/"><img class="avatar" src="https://darednaxella.name/img/profile.jpg" srcset="https://darednaxella.name/img/profile.jpg 1x"></a>
+            
+            <a href="https://darednaxella.name/"><div class="name">Alexander Shchapov</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        <li class="nav-blog"><a href="https://darednaxella.name/"><span>Index</span></a></li>
+                    
+                        <li class="nav-about"><a href="https://darednaxella.name/about/"><span>About</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/alexanderad" target="_blank" rel="noopener"><img class="icon" src="https://darednaxella.name/img/github.svg" alt="github" /></a>
+        
+
+        
+
+	
+
+        
+
+        
+
+        
+            <a href="//linkedin.com/in/darednaxella" target="_blank" rel="noopener"><img class="icon" src="https://darednaxella.name/img/linkedin.svg" alt="linkedin" /></a>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Copter Life Log 10: Broken Things
+
+</div>
+
+                    <div class="initials"><a href="https://darednaxella.name/"></a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Mon Sep 15 2014 18:43:31 UTC'>Sep 15, 2014</div>
+                    
+                    
+		    <div class="reading-time"><div class="middot"></div>3 minutes read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                
+
+<h4 id="things-are-broken">Things are Broken</h4>
+
+<p>It&rsquo;s time to change term &ldquo;build&rdquo; into &ldquo;life&rdquo;, I guess, since we&rsquo;ve everything built now and current stage is actual multicopter usage. Recent weeks I did dozen of flights in different locations and under different weather conditions. Basically learning how to flight, performing crazy acrobatic aerotricks, making tiny PI controller adjustments and other improvements.</p>
+
+<p>In this post I want to summarize faults and constructive problems I observed during those weeks of usage.</p>
+
+<h4 id="broken-screws-in-propeller-mount">Broken Screws in Propeller Mount</h4>
+
+<p>Since my NTM motor has a short shaft it requires additional propeller mounting kit. After several flights vibrations or collisions broke couple of screws:
+<img src="https://darednaxella.name/content/images/2014/Sep/2014-09-09-22-28-29-1.jpg" alt="" />
+<strong>Solution</strong>: screws replacement.</p>
+
+<h4 id="severely-damaged-propellers">Severely Damaged Propellers</h4>
+
+<p>Propellers can be easily broken in a short time by a newbie pilot like me. First set survived for two weeks and got damage incompatible with further life or flight. Although a set of new ones cost as much as $2.5 I intentionally used my first set until it was completely wasted. Even with absolutely awful condition of props copter is able to take off, however it is almost impossible to control the flight.
+<strong>Solution</strong>: new set of propellers.<br />
+<strong>Side note conclusion</strong>: you can omit balancing of propellers in case if you are novice; that is just a waste of time at this point.</p>
+
+<h4 id="unscrewing-motor-mount">Unscrewing Motor Mount</h4>
+
+<p>Motors are mounted using long screws which tend to unscrew on their own. This problem has two sides: on the one side I can&rsquo;t screw them harded, since frame beams are made of aluminium-like material which is soft enough. On the other side motors mounted not hard enough unscrew themselves in a blink of eye.
+<img src="https://darednaxella.name/content/images/2014/Sep/2014-09-15-21-10-35.jpg" alt="" />
+<strong>Solution</strong>: screws replacement + <a href="https://en.wikisource.org/wiki/Grover,_John_William_(DNB01)">Grower</a>&rsquo;s <a href="https://www.google.com/search?q=spring+washer&amp;es_sm=93&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ei=cAMXVKv9J-HqyQOshoG4Bw&amp;ved=0CAgQ_AUoAQ&amp;biw=1906&amp;bih=952">spring washer</a></p>
+
+<blockquote>
+<p>A <em>split washer</em> or a <em>spring lock washer</em> is a ring split at one point and bent into a helical shape. This causes the washer to exert a spring force between the fastener&rsquo;s head and the substrate, which maintains the washer hard against the substrate and the bolt thread hard against the nut or substrate thread, creating more friction and <em>resistance to rotation</em>.</p>
+</blockquote>
+
+<h4 id="lost-motor-shaft-washer">Lost Motor Shaft Washer</h4>
+
+<p>As a result of hard collision in a crash rotor disassembled with stator and small washer that holds them together was lost. Motor seems to survive and its geometry is preserved, but I have no idea where I can find something similar to that lost washer.
+<img src="https://darednaxella.name/content/images/2014/Sep/2014-09-15-21-27-48.jpg" alt="" />
+<strong>Solution</strong>: motor replacement with spare one. Luckily I had ordered five of them.</p>
+
+<h4 id="more-flight-videos">More Flight Videos</h4>
+
+<p>Also I&rsquo;ve mounted iphone using ribbons and bootlaces and recorded couple of videos. Because of such barbarous mounting phone ideally receives all vibrations produced by whole construction so that you can enjoy jello effect while watching.</p>
+
+<iframe width="1280" height="720" src="//www.youtube.com/embed/E38ZUwPigk0?rel=0" frameborder="0" allowfullscreen></iframe>
+
+<iframe width="1280" height="720" src="//www.youtube.com/embed/Mms4iluLYCo?rel=0" frameborder="0" allowfullscreen></iframe>
+
+                <br>
+		<p class="back-to-posts"><a href="https://darednaxella.name/blog/">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-123-45', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+
+</body>
+</html>
+

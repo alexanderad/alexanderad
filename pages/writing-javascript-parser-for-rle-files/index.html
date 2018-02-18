@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Alexander Shchapov">
+<meta name="description" content="Intro I spent some time recently thinking on implementation of Conway&rsquo;s Game of Life. Since it effectively has only four rules explaining all the &ldquo;mechanics&rdquo;, there is not much to implement. The main purpose for me was to refresh knowledge of JavaScript and get a bit more familiar with Node.js and D3.js.
+At some point of implementation I found a LifeWiki which has tons of information about different patterns and their behavior.">
+
+<meta property="og:title" content="Writing JavaScript parser for RLE files with PEG.js" />
+<meta property="og:description" content="Intro I spent some time recently thinking on implementation of Conway&rsquo;s Game of Life. Since it effectively has only four rules explaining all the &ldquo;mechanics&rdquo;, there is not much to implement. The main purpose for me was to refresh knowledge of JavaScript and get a bit more familiar with Node.js and D3.js.
+At some point of implementation I found a LifeWiki which has tons of information about different patterns and their behavior." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://darednaxella.name/pages/writing-javascript-parser-for-rle-files/" />
+
+
+
+<meta property="article:published_time" content="2015-01-10T07:43:52&#43;00:00"/>
+
+<meta property="article:modified_time" content="2015-01-10T07:43:52&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+<title>
+
+
+     Writing JavaScript parser for RLE files with PEG.js 
+
+</title>
+<link rel="canonical" href="https://darednaxella.name/pages/writing-javascript-parser-for-rle-files/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://darednaxella.name/css/reset.css?t=2018-02-18%2016%3a24%3a09.699204273%20%2b0200%20EET%20m%3d%2b0.035485131">
+    <link rel="stylesheet" href="https://darednaxella.name/css/pygments.css?t=2018-02-18%2016%3a24%3a09.699204273%20%2b0200%20EET%20m%3d%2b0.035485131">
+    <link rel="stylesheet" href="https://darednaxella.name/css/main.css?t=2018-02-18%2016%3a24%3a09.699204273%20%2b0200%20EET%20m%3d%2b0.035485131">
+    
+        <link rel="stylesheet" href="https://darednaxella.name/css/overrides.css?t=2018-02-18%2016%3a24%3a09.699204273%20%2b0200%20EET%20m%3d%2b0.035485131">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://darednaxella.name/img/leaf.ico"
+
+>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                
+                <a href="https://darednaxella.name/"><img class="avatar" src="https://darednaxella.name/img/profile.jpg" srcset="https://darednaxella.name/img/profile.jpg 1x"></a>
+            
+            <a href="https://darednaxella.name/"><div class="name">Alexander Shchapov</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        <li class="nav-blog"><a href="https://darednaxella.name/"><span>Index</span></a></li>
+                    
+                        <li class="nav-about"><a href="https://darednaxella.name/about/"><span>About</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/alexanderad" target="_blank" rel="noopener"><img class="icon" src="https://darednaxella.name/img/github.svg" alt="github" /></a>
+        
+
+        
+
+	
+
+        
+
+        
+
+        
+            <a href="//linkedin.com/in/darednaxella" target="_blank" rel="noopener"><img class="icon" src="https://darednaxella.name/img/linkedin.svg" alt="linkedin" /></a>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Writing JavaScript parser for RLE files with PEG.js
+
+</div>
+
+                    <div class="initials"><a href="https://darednaxella.name/"></a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Sat Jan 10 2015 07:43:52 UTC'>Jan 10, 2015</div>
+                    
+                    
+		    <div class="reading-time"><div class="middot"></div>6 minutes read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                
+
+<h4 id="intro">Intro</h4>
+
+<p>I spent some time recently thinking on implementation of <a href="http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway&rsquo;s Game of Life</a>. Since it effectively has only four rules explaining all the &ldquo;mechanics&rdquo;, there is not much to implement. The main purpose for me was to refresh knowledge of JavaScript and get a bit more familiar with Node.js and D3.js.</p>
+
+<p>At some point of implementation I found a <a href="http://www.conwaylife.com/wiki/Main_Page">LifeWiki</a> which has tons of information about different patterns and their behavior. Notably, there is also an archive of 3k+ patterns of life available for download as a single archive. I decided to widen the result a bit to include DIY RLE parser and a simple browser for that collection.</p>
+
+<h4 id="rle-format">RLE Format</h4>
+
+<p>Wikipedia says that
+&gt; <a href="http://en.wikipedia.org/wiki/Run-length_encoding">Run-length encoding</a> (RLE) is a very simple form of data compression in which runs of data (that is, sequences in which the same data value occurs in many consecutive data elements) are stored as a single data value and count, rather than as the original run. This is most useful on data that contains many such runs.</p>
+
+<p>With some modifications it can be easily used for cellular automata data. For example, here is the famous [Gosper Glider Gun]() described in RLE format:</p>
+
+<pre><code>#N Gosper glider gun
+#C This was the first gun discovered.
+#C As its name suggests, it was discovered by Bill Gosper.
+x = 36, y = 9, rule = B3/S23
+24bo$22bobo$12b2o6b2o12b2o$11bo3bo4b2o12b2o$2o8bo5bo3b2o$2o8bo3bob2o4bobo$10bo5bo7bo$11bo3bo$12b2o!
+</code></pre>
+
+<p>Spending some time we can create a dumb regex based parser for this format, but why we want to to that if we can describe format grammar instead and let parser to be generated for us based on grammar specifications? Here is where PEG.js kicks in.</p>
+
+<h4 id="peg-js">PEG.js</h4>
+
+<blockquote>
+<p><a href="http://pegjs.org/">PEG.js</a> is a simple parser generator for JavaScript that produces fast parsers with excellent error reporting. You can use it to process complex data or computer languages and build transformers, interpreters, compilers and other tools easily.</p>
+</blockquote>
+
+<p><a href="http://en.wikipedia.org/wiki/Parsing">Building parsers</a> is a giant branch of Computer Science which learns how to analyze and process either natural or synthetic languages. Every programming language compiler or interpreter begins from parsing data passed to it as an input. We are not going to dive deep, instead we will concentrate on a simple task of writing format interpreter for RLE file describing Life pattern.</p>
+
+<p>PEG.js does all the magic for us behind the scenes, requiring us only to defince a grammar using simple <a href="http://pegjs.org/documentation#grammar-syntax-and-semantics">grammar syntax and semantics</a>. By the way, it also offers <a href="http://pegjs.org/online">online playground</a>, which is nice to try.</p>
+
+<h4 id="creating-a-grammar">Creating a Grammar</h4>
+
+<p>Grammar creation starts with a definitions of &ldquo;atoms&rdquo;, simpliest things in our format.
+Lets describe basic building bits first, which do not have any transformations, for convenience we define their names here:</p>
+
+<pre><code>comma
+ = &quot;,&quot;
+
+equals
+ = &quot;=&quot;
+
+digit
+ = [0-9]
+
+nl &quot;new line&quot;
+ = &quot;\n&quot;
+
+ws &quot;white space&quot;
+ = [ \t]
+
+_ &quot;any number of whitespaces&quot;
+ = ws*
+
+__ &quot;extended whitespace&quot;
+ = nl* / ws*
+</code></pre>
+
+<p>As you can see, we say that <code>nl</code> is our new line, and a <code>ws</code> stands for white space, which can be represented by a space or tab character. For convenience we call any number of white spaces a <code>_</code>, and we also define a <code>__</code> version of a whitespace, which also includes line breaks. This can be useful in order to ignore whitespaces and we&rsquo;ll see that in a moment. Here we declare that a digit is anything that match pattern <code>[0-9]</code>. Interpolation of that range is done by JavaScript regex parser as well as other quantifiers as <code>*</code> or <code>+</code>.</p>
+
+<p>We also want to make some transformations on parsed values. Here <em>actions</em> come. Any group matched by <code>+</code> or <code>*</code> results in an array in action arguments. Action is an anonymous function which follows expression. Let&rsquo;s define <em>integer</em> and <em>string</em>.</p>
+
+<pre><code>str &quot;comment string&quot;
+ = characters:([^\n])+ {
+    return characters.join(&quot;&quot;);
+}
+
+int &quot;integer&quot;
+ = digits:digit+ {
+    return parseInt(digits.join(&quot;&quot;));
+}
+
+signed_int &quot;signed integer&quot;
+ = sign:[+-]? n:int {
+    return parseInt(
+        sign + n
+    )
+}
+</code></pre>
+
+<p>Lets take a closer look. First we declare <code>str</code>, which in out case has specific usage: meta comments. We state that string can contain any character except a new line; we also assign captured value to a variable called <code>characters</code>; finally a <code>+</code> sign from a regular expression results an array of characters captured in <code>characters</code> variable, so that in <em>action</em> part we <code>join</code> them into a string.
+An <code>integer</code> in our Universe is a number of digits, we join them to a string and then apply <code>parseInt</code>.
+A <code>signed integer</code> also has a sign prefix.</p>
+
+<p>Then we move on to parsing meta comments. We have comments of several types:</p>
+
+<ul>
+<li><code>#N</code> stores title of pattern</li>
+<li><code>#C</code> or <code>#c</code> is a text comment</li>
+<li><code>#O</code> stores author&rsquo;s name</li>
+<li><code>#R</code> (or <code>#P</code>) shows top left corner of the field (can be used to center pattern)</li>
+<li><code>#r</code> shows the rule for a totalistic cellular automaton in the form survival_counts/birth_counts (e.g. <sup>23</sup>&frasl;<sub>3</sub> for Life)</li>
+</ul>
+
+<p>Here is our grammar declaration for comments:</p>
+
+<pre><code>meta_name &quot;name comment (#N)&quot;
+ = &quot;#N&quot; _ data:str {
+    return {
+        &quot;type&quot;: &quot;name&quot;,
+        &quot;value&quot;: data
+    }
+}
+
+meta_comment &quot;comment (#C, #c)&quot;
+ = &quot;#&quot;[Cc] _ data:str? {
+    return {
+        &quot;type&quot;: &quot;comment&quot;,
+        &quot;value&quot;: data || &quot;&quot;
+    }
+}
+
+...
+
+meta_top_left_coordinates &quot;TL coordinates comment (#R, #P)&quot;
+ = &quot;#&quot;[RP] _ x:signed_int _ y:signed_int  {
+    return {
+        &quot;type&quot;: &quot;topLeftCoordinates&quot;,
+        &quot;x&quot;: x,
+        &quot;y&quot;: y,
+    }
+}
+</code></pre>
+
+<p>These declarations are pretty straightforward. By <code>_</code> we indicate any number of whitespaces between <code>#x</code> and comment content. For <code>#R</code> and <code>#P</code> we perform additional check for format <code>#R -100 200</code>. All matched data we convert to objects.</p>
+
+<p>We also can group all meta declarations under one definition to use it later:</p>
+
+<pre><code>meta_tags &quot;comment line (#)&quot;
+ = meta_name / meta_comment / meta_rules / meta_author / meta_top_left_coordinates
+</code></pre>
+
+<p>Next goes header line, which shows field width and height. It can optionally declare game rules: <code>x = m, y = n, rule = abc</code>. Header is declared in grammar similar to comments above, so lets move on to pattern itself.</p>
+
+<p>The pattern itself begins on the next line and it is encoded as a sequence if items of the form <code>&lt;run_count&gt;&lt;tag&gt;</code>, where <code>&lt;tag&gt;</code> is one of the following:</p>
+
+<ul>
+<li><code>b</code> = a dead cell</li>
+<li><code>o</code> = a live cell</li>
+<li><code>$</code> = end of a line of the pattern</li>
+</ul>
+
+<p>and <code>&lt;run_count&gt;</code> is the number of occurrences of <code>&lt;tag&gt;</code>.</p>
+
+<p>Additional rules are:</p>
+
+<ul>
+<li><code>run_count</code> can be omitted if equal to 1;</li>
+<li>dead cells at the end of a pattern line do not need to be encoded, nor does the end of the last line of the pattern;</li>
+<li>the last <code>&lt;run_count&gt;&lt;tag&gt;</code> item is followed by a <code>!</code> character;</li>
+<li>lines can be separated by new line;</li>
+<li>anything after the final <code>!</code> is ignored.</li>
+</ul>
+
+<p>First we declare a tag, EOF and EOF:</p>
+
+<pre><code>tag &quot;cell tag&quot;
+ // b = a dead cell
+ // o = a live cell
+ = [bo]
+
+pattern_tag_eol
+ = &quot;$&quot;
+
+pattern_eof
+ = &quot;!&quot; .*
+</code></pre>
+
+<p>Then we declare normal and tagless forms:</p>
+
+<pre><code>normal_or_countless_tag
+ = run_count:int? __ tag:tag __ {
+   return [run_count || 1, tag]
+}
+
+tagless_dead_tag
+ = run_count:int {
+   return [run_count, &quot;b&quot;];
+}
+</code></pre>
+
+<p>Finally we declare single tag, pattern line and match all pattern lines:</p>
+
+<pre><code>pattern_lines
+ = pattern_lines:pattern_line+ {
+    return {
+        &quot;type&quot;: &quot;lines&quot;,    
+        &quot;items&quot;: pattern_lines
+    }
+}
+
+pattern_line
+ = tag:pattern_single_tag* __ (pattern_tag_eol / pattern_eof) __ {
+    return tag
+}
+
+pattern_single_tag
+ = normal_or_countless_tag / tagless_dead_tag
+</code></pre>
+
+<p>At this point we have everything declared, it&rsquo;s time to glue items together. <code>start</code> is a special PEG.js directive which identified entry point for parser.</p>
+
+<p>We say that a line is a meta comment, header or a pattern, which are separated by line breaks:</p>
+
+<pre><code> line
+ = line:(meta_tags / header / pattern_lines) nl? { return line }
+</code></pre>
+
+<p>And we declare the entrypoint as a multiple lines:</p>
+
+<pre><code>start
+ = line+
+</code></pre>
+
+<p>That&rsquo;s it!</p>
+
+                <br>
+		<p class="back-to-posts"><a href="https://darednaxella.name/blog/">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-123-45', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+
+</body>
+</html>
+

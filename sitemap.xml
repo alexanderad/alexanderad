@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://darednaxella.name/pages/python-gdb/</loc>
+    <lastmod>2015-07-26T06:31:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/pages/copter-life-log-calibrate/</loc>
+    <lastmod>2015-06-04T19:04:09+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/pages/writing-javascript-parser-for-rle-files/</loc>
+    <lastmod>2015-01-10T07:43:52+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/pages/copter-life-log-repairing-turnigy-9x-broken-switches/</loc>
+    <lastmod>2014-12-21T05:31:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/pages/copter-life-log-nothing-can-bring-me-down/</loc>
+    <lastmod>2014-11-16T15:37:58+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/pages/copter-life-log-11-multiwii/</loc>
+    <lastmod>2014-09-29T19:51:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/pages/copter-life-log-10-recent-faults/</loc>
+    <lastmod>2014-09-15T18:43:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/pages/copter-build-log-9-more-flights/</loc>
+    <lastmod>2014-09-07T18:10:19+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/pages/copter-build-log-8-metrics/</loc>
+    <lastmod>2014-09-02T18:31:44+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/pages/copter-build-log-7-last-updates-2/</loc>
+    <lastmod>2014-08-31T19:40:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/pages/copter-build-log-6-propellers/</loc>
+    <lastmod>2014-08-23T18:29:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/pages/copter-build-log-5-wiring-2/</loc>
+    <lastmod>2014-08-21T19:02:46+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/pages/copter-build-log-4-wiring/</loc>
+    <lastmod>2014-08-19T21:09:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/pages/copter-build-log-3-the-firmware/</loc>
+    <lastmod>2014-08-18T20:36:42+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/pages/git-rebase-step-by-step/</loc>
+    <lastmod>2014-08-13T08:18:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/pages/copter-build-log-2-soldering/</loc>
+    <lastmod>2014-08-12T21:40:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/pages/copter-build-log-1-the-frame/</loc>
+    <lastmod>2014-07-27T09:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/pages/copter-build-log-intro/</loc>
+    <lastmod>2014-07-26T09:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/</loc>
+    <lastmod>2015-07-26T06:31:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/blog/</loc>
+    <lastmod>2015-07-26T06:31:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/tags/broken-things/</loc>
+    <lastmod>2014-12-21T05:31:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/categories/broken-things/</loc>
+    <lastmod>2014-12-21T05:31:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/categories/</loc>
+    <lastmod>2014-12-21T05:31:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/tags/copter-build-log/</loc>
+    <lastmod>2015-06-04T19:04:09+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/categories/copter-build-log/</loc>
+    <lastmod>2015-06-04T19:04:09+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/tags/gdb/</loc>
+    <lastmod>2015-07-26T06:31:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/categories/gdb/</loc>
+    <lastmod>2015-07-26T06:31:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/tags/git/</loc>
+    <lastmod>2014-08-13T08:18:08+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/categories/git/</loc>
+    <lastmod>2014-08-13T08:18:08+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/tags/howto/</loc>
+    <lastmod>2014-12-21T05:31:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/categories/howto/</loc>
+    <lastmod>2014-12-21T05:31:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/tags/javascript/</loc>
+    <lastmod>2015-01-10T07:43:52+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/categories/javascript/</loc>
+    <lastmod>2015-01-10T07:43:52+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/tags/pegjs/</loc>
+    <lastmod>2015-01-10T07:43:52+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/categories/pegjs/</loc>
+    <lastmod>2015-01-10T07:43:52+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/tags/programming/</loc>
+    <lastmod>2015-01-10T07:43:52+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/categories/programming/</loc>
+    <lastmod>2015-01-10T07:43:52+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/tags/python/</loc>
+    <lastmod>2015-07-26T06:31:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/categories/python/</loc>
+    <lastmod>2015-07-26T06:31:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/tags/</loc>
+    <lastmod>2014-12-21T05:31:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/tags/tech/</loc>
+    <lastmod>2015-07-26T06:31:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/categories/tech/</loc>
+    <lastmod>2015-07-26T06:31:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/tags/thoughts/</loc>
+    <lastmod>2014-08-13T08:18:08+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/categories/thoughts/</loc>
+    <lastmod>2014-08-13T08:18:08+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/tags/turnigy-9x/</loc>
+    <lastmod>2014-12-21T05:31:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darednaxella.name/categories/turnigy-9x/</loc>
+    <lastmod>2014-12-21T05:31:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

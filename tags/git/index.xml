@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Alexander Shchapov</title>
+    <link>https://darednaxella.name/tags/git/</link>
+    <description>Recent content in Git on Alexander Shchapov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 13 Aug 2014 08:18:08 +0000</lastBuildDate>
+    
+	<atom:link href="https://darednaxella.name/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>git rebase step by step</title>
+      <link>https://darednaxella.name/pages/git-rebase-step-by-step/</link>
+      <pubDate>Wed, 13 Aug 2014 08:18:08 +0000</pubDate>
+      
+      <guid>https://darednaxella.name/pages/git-rebase-step-by-step/</guid>
+      <description>A lot of mysterios stories are hidden behind rebase command, and from the start it seems to be a tricky part of git work flow. The truth is that everything becomes clear once you have a full picture in front of you. Here I&amp;rsquo;m trying to summarize rebase command usage in one example of typical (not necessarily the best one) flow.
+Step 1: create a feature branch Assuming you&amp;rsquo;re on a master branch of repository, create a feature branch:</description>
+    </item>
+    
+  </channel>
+</rss>

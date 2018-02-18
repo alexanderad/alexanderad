@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Alexander Shchapov">
+<meta name="description" content="Bullets Drama As the time passes I&rsquo;m losing hope for getting my parcel with bullet connectors. It&rsquo;s been already more than 20 days since it was shipped from Netherlands and it should be already here. I remember I promised to balance props in this part, but instead I decided to apply hacky solution: while I lack 2 bullet connectors for complete setup I have extra XT60 connectors which are designed to connect ESCs to power, however they have same 3.">
+
+<meta property="og:title" content="Copter Build Log 4: Wiring" />
+<meta property="og:description" content="Bullets Drama As the time passes I&rsquo;m losing hope for getting my parcel with bullet connectors. It&rsquo;s been already more than 20 days since it was shipped from Netherlands and it should be already here. I remember I promised to balance props in this part, but instead I decided to apply hacky solution: while I lack 2 bullet connectors for complete setup I have extra XT60 connectors which are designed to connect ESCs to power, however they have same 3." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://darednaxella.name/pages/copter-build-log-4-wiring/" />
+
+
+
+<meta property="article:published_time" content="2014-08-19T21:09:21&#43;00:00"/>
+
+<meta property="article:modified_time" content="2014-08-19T21:09:21&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+<title>
+
+
+     Copter Build Log 4: Wiring 
+
+</title>
+<link rel="canonical" href="https://darednaxella.name/pages/copter-build-log-4-wiring/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://darednaxella.name/css/reset.css?t=2018-02-18%2016%3a24%3a09.714942123%20%2b0200%20EET%20m%3d%2b0.051222985">
+    <link rel="stylesheet" href="https://darednaxella.name/css/pygments.css?t=2018-02-18%2016%3a24%3a09.714942123%20%2b0200%20EET%20m%3d%2b0.051222985">
+    <link rel="stylesheet" href="https://darednaxella.name/css/main.css?t=2018-02-18%2016%3a24%3a09.714942123%20%2b0200%20EET%20m%3d%2b0.051222985">
+    
+        <link rel="stylesheet" href="https://darednaxella.name/css/overrides.css?t=2018-02-18%2016%3a24%3a09.714942123%20%2b0200%20EET%20m%3d%2b0.051222985">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://darednaxella.name/img/leaf.ico"
+
+>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                
+                <a href="https://darednaxella.name/"><img class="avatar" src="https://darednaxella.name/img/profile.jpg" srcset="https://darednaxella.name/img/profile.jpg 1x"></a>
+            
+            <a href="https://darednaxella.name/"><div class="name">Alexander Shchapov</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        <li class="nav-blog"><a href="https://darednaxella.name/"><span>Index</span></a></li>
+                    
+                        <li class="nav-about"><a href="https://darednaxella.name/about/"><span>About</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/alexanderad" target="_blank" rel="noopener"><img class="icon" src="https://darednaxella.name/img/github.svg" alt="github" /></a>
+        
+
+        
+
+	
+
+        
+
+        
+
+        
+            <a href="//linkedin.com/in/darednaxella" target="_blank" rel="noopener"><img class="icon" src="https://darednaxella.name/img/linkedin.svg" alt="linkedin" /></a>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Copter Build Log 4: Wiring
+
+</div>
+
+                    <div class="initials"><a href="https://darednaxella.name/"></a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Tue Aug 19 2014 21:09:21 UTC'>Aug 19, 2014</div>
+                    
+                    
+		    <div class="reading-time"><div class="middot"></div>2 minutes read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                
+
+<h4 id="bullets-drama">Bullets Drama</h4>
+
+<p>As the time passes I&rsquo;m losing hope for getting my parcel with bullet connectors. It&rsquo;s been already more than 20 days since it was shipped from Netherlands and it should be already here. I remember I promised to balance props in this part, but instead I decided to apply hacky solution: while I lack 2 bullet connectors for complete setup I have extra XT60 connectors which are designed to connect ESCs to power, however they have same 3.5mm hole, which fits male connectors from engines. That means that in meanwhile it can be pretty viable solution.</p>
+
+<p>Properly soldered ESC to engine bullet connectors:
+<img src="https://darednaxella.name/content/images/2014/Aug/2014-08-12-22-15-58.jpg" alt="" /></p>
+
+<p>Hacky solution using XT60 plug:
+<img src="https://darednaxella.name/content/images/2014/Aug/2014-08-19-19-12-38.jpg" alt="" /></p>
+
+<p>It is absolutely adequate and reliable in terms of connectivity so I&rsquo;m happy with this for now.</p>
+
+<h4 id="power-distribution-plug">Power Distribution Plug</h4>
+
+<p>&ldquo;Power Distribution Plug&rdquo; is a loud name for another hacky approach. It is used to connect battery to ESCs. 4 x XT60 female plugs are wired to one XT60 male plug:
+<img src="https://darednaxella.name/content/images/2014/Aug/2014-08-19-20-12-58.jpg" alt="" />
+It was not easy to solder 4 x 16 AWG wires together. Have you ever thought how to measure and define wire thikness? It appeared that there is a system called <a href="http://en.wikipedia.org/wiki/American_wire_gauge">American wire gauge</a> which declares a standard for that.</p>
+
+<h4 id="mounting-escs-and-flight-controller">Mounting ESCs and Flight Controller</h4>
+
+<p>I used cable ties to mount ESCs on frame and velcro tape to mount flight controller box on top. I&rsquo;m leaving wire mess for now, until I&rsquo;m sure everything is connected in right order.</p>
+
+<p>ESCs mounted on the frame:
+<img src="https://darednaxella.name/content/images/2014/Aug/2014-08-19-20-50-44.jpg" alt="" /></p>
+
+<p>Mounting place for flight controller board:
+<img src="https://darednaxella.name/content/images/2014/Aug/2014-08-19-21-09-31.jpg" alt="" /></p>
+
+<h4 id="connecting-motors-and-remote-receiver">Connecting Motors and Remote Receiver</h4>
+
+<p>It took me some time to figure out proper pinout for receiver, since it has only channels labels, like <em>CH1, CH2</em>, etc while on board I have <em>AILeron, RUDder, ELEvation</em> and so on. It is also important not to confuse signal vs ground.</p>
+
+<p>Finally receivers and ESCs are wired to flight controller:
+<img src="https://darednaxella.name/content/images/2014/Aug/2014-08-19-21-27-49.jpg" alt="" /></p>
+
+<h4 id="next-steps">Next Steps</h4>
+
+<p>Next step is first power on, which has several important staged, like transmitter and received binding, adjusting receiver signals levels etc, etc.</p>
+
+                <br>
+		<p class="back-to-posts"><a href="https://darednaxella.name/blog/">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-123-45', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+
+</body>
+</html>
+
